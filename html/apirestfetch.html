@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Peticion a API</title>
+    <link rel="stylesheet" href="../css/table_apirest.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+<body onload="mostrar_datos()">
+    <header>
+        <h2>Listado de Programas</h2>
+    </header>
+    <br>
+    <div style="overflow-x:auto;">
+        <table id="t01">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Productor</th> 
+                    <th>Tipo</th> 
+                    <th>Precio x Seg</th> 
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+
+            </tbody>
+    </table>    
+    </div>
+  
+    <script src="../js/apirest.js"></script>
+</body>
+</html>

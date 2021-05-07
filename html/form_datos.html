@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Datos</title>
+</head>
+<body>
+    <h2>Datos</h2>
+    <form onsubmit="mostrardatos()" method="POST">
+        <input type="text" placeholder="Nombre" id="nombre" required>
+        <br>
+        <br>
+        <input type="text" placeholder="Apellido" id="apellido" required>
+        <br>
+        <br>
+        <input type="number" placeholder="Edad" id="edad" required>
+        <br>
+        <br>
+        <input type="submit" value="Mostrar Datos">
+    </form>
+    <br>
+    <button type="reset" onclick="limpiarcampos()">Limpiar Campos</button>
+    <br>
+    <h4 id="hname"></h4>
+    <h4 id="hapellido"></h4>
+    <h4 id="hedad"></h4>
+    <h3 id="error"></h3>
+    <script src="../js/form_datos.js"></script>
+    
+</body>
+</html>

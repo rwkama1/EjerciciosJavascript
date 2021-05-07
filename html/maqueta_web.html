@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/maqueta_web.css">
+    <title>Maquetación Web</title>
+</head>
+<body>    
+    <div class="container">
+    <div class="row">
+        <h1 style="background-color:seagreen; color:white;">Proyecto JS</h1>
+    </div>
+    <div class="navbar">   
+            <a href="#home">Inicio</a>
+            <a href="#news">Reloj</a>
+            <a href="#sobremi">Sobre mi</a>
+            <a href="#contact">Contacto</a>
+     </div>
+    <p></p>
+     <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="../img/paisaje1.jpg" height="350" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="../img/paisaje2.jpg" height="350"  style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="../img/paisaje3.jpg" height="350"  style="width:100%">
+         
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+     </div>
+        <br>
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+      
+        <div class="row">
+            <div class="main">     
+                <div>
+                    <p><h3>Prueba de titulo 1</h3></p>
+                    <p><h5 style="color:darkgray;">Publicado el dia 06 de Mayo del 2021</h5></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Quaerat vitae earum id ratione, 
+                     fugit doloribus aliquam culpa iusto quod quo, 
+                     architecto nesciunt exercitationem sequi 
+                     aperiam provident vel temporibus neque recusandae?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nobis atque dolore cum minima ratione qui labore, quo itaque dolor commodi,
+                     culpa praesentium quos at explicabo 
+                     molestiae assumenda voluptatum architecto placeat.</p>
+                    <p><button class="button">Leer más</button></p>
+                </div> 
+                <div>
+                    <p><h3>Prueba de titulo 2</h3></p>
+                    <p><h5 style="color:darkgray;">Publicado el dia 06 de Mayo del 2021</h5></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Quaerat vitae earum id ratione, 
+                     fugit doloribus aliquam culpa iusto quod quo, 
+                     architecto nesciunt exercitationem sequi 
+                     aperiam provident vel temporibus neque recusandae?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nobis atque dolore cum minima ratione qui labore, quo itaque dolor commodi,
+                     culpa praesentium quos at explicabo 
+                     molestiae assumenda voluptatum architecto placeat.</p>
+                    <p><button class="button">Leer más</button></p>
+                </div> 
+                
+            </div>
+            <div class="side"> 
+                <div style="text-align: center;">
+                 <hr class="hr-text" data-content="Una Imagen">
+                </div>
+                <div>
+                    <img src="../img/paisaje4.jpg" height="250" width="260">
+                </div>     
+                <div>              
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis quo aperiam non, vero voluptatem 
+                    soluta quos nostrum ducimus cumque quia neque 
+                    quaerat quam deserunt, aut doloribus ut. Recusandae, 
+                    saepe numquam?
+               </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <script src="../js/maqueta_web.js"></script>
+
+
+</body>
+</html>

@@ -1,5 +1,41 @@
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
+body {
+  background-image: url(../img/paisaje1.jpg);
+  font-family: Verdana, sans-serif; margin:0; 
+}
+
+.leftrow
+{
+
+  background-color: seagreen;
+  position: absolute;
+  top: 70%;
+
+}
+.boton_verde
+{
+  background-color: darkgreen; /* Green */
+  border: white;
+  padding: 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.boton_rojo
+{
+  background-color:darkred; 
+  border: white;
+  padding: 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.boton_azul
+{
+  background-color:darkblue; 
+  border: white;
+  padding: 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
@@ -40,11 +76,20 @@ img {vertical-align: middle;}
     background-color: #ddd;
     color: black;
   }
+.primer_container
+  {
+    max-width: 1050px;
+    position: relative;
+    margin: auto;
+    background-color: white;
+
+  }
 .container
 {
     max-width: 1000px;
     position: relative;
     margin: auto;
+    background-color: white;
 }
 
 

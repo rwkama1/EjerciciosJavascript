@@ -8,27 +8,30 @@
     <title>Maquetación Web</title>
 </head>
 <body> 
- <div class="leftrow">
-   <!-- <div class="divleft">
-    sdagasga
-   </div> -->
+
+<div class="leftrow">
 <div>
-  <button class="boton_verde"></button>
+  <button class="boton_original" onclick="cambiar_color_original()" ></button>
   <br>
-  <button class="boton_rojo"></button>
+  <button class="boton_verde" onclick="cambiar_color_green()" ></button>
+  <br>
+  <button class="boton_rojo" onclick="cambiar_color_red()"></button>
     <br>
-    <button class="boton_azul"></button>
+  <button class="boton_azul" onclick="cambiar_color_azul()"></button>
+  <br>
+
 </div>
  </div>
-  <div>
+  
     <br>
-  </div>
-  <div class="primer_container">
-  <div class="container">
-    <div class="row">
-        <h1 style="background-color:seagreen; color:white;">Proyecto JS</h1>
+  
+  <div id="div1" class="primer_container">
+    
+  <div id="div2"class="container">
+    <div id="div3" class="row">
+        <h1 id="1h1" style="background-color:seagreen; color:white;">Proyecto JS</h1>
     </div>
-    <div class="navbar">   
+    <div id="navbar" class="navbar">   
             <a href="#home">Inicio</a>
             <a href="#news">Reloj</a>
             <a href="#sobremi">Sobre mi</a>
@@ -64,8 +67,8 @@
           <span class="dot" onclick="currentSlide(3)"></span> 
         </div>
       
-        <div class="row">
-            <div class="main">     
+        <div id="div4" class="row">
+            <div id="div5" class="main">     
                 <div>
                     <p><h3>Prueba de titulo 1</h3></p>
                     <p><h5 style="color:darkgray;">Publicado el dia 06 de Mayo del 2021</h5></p>
@@ -78,7 +81,7 @@
                     Nobis atque dolore cum minima ratione qui labore, quo itaque dolor commodi,
                      culpa praesentium quos at explicabo 
                      molestiae assumenda voluptatum architecto placeat.</p>
-                    <p><button class="button">Leer más</button></p>
+                    <p><button id="btn1" class="button">Leer más</button></p>
                 </div> 
                 <div>
                     <p><h3>Prueba de titulo 2</h3></p>
@@ -92,7 +95,7 @@
                     Nobis atque dolore cum minima ratione qui labore, quo itaque dolor commodi,
                      culpa praesentium quos at explicabo 
                      molestiae assumenda voluptatum architecto placeat.</p>
-                    <p><button class="button">Leer más</button></p>
+                    <p><button id="btn2" class="button">Leer más</button></p>
                 </div> 
                 
             </div>
@@ -115,7 +118,7 @@
     </div>
  
 </div>
-   
+</div>
 
     <script src="../js/maqueta_web.js"></script>
 

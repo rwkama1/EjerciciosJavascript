@@ -1,7 +1,8 @@
 * {box-sizing: border-box}
 body {
-  background-image: url(../img/paisaje1.jpg);
+  
   font-family: Verdana, sans-serif; margin:0; 
+  background: url(../img/paisaje1.jpg);
 }
 
 .leftrow
@@ -11,6 +12,14 @@ body {
   position: absolute;
   top: 70%;
 
+}
+.boton_original
+{
+  background-color: white; /* Green */
+  border: white;
+  padding: 15px;
+  font-size: 12px;
+  cursor: pointer;
 }
 .boton_verde
 {
@@ -27,6 +36,26 @@ body {
   padding: 15px;
   font-size: 12px;
   cursor: pointer;
+}
+.boton_verde:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+.boton_azul:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+.boton_rojo:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+.boton_original:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
 }
 .boton_azul
 {

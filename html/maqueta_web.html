@@ -5,39 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/maqueta_web.css">
+    <link rel="stylesheet" href="../css/form_maqueta_web.css">
+    <link rel="stylesheet" href="../css/accordion_maqueta_web.css">
     <title>Maquetación Web</title>
 </head>
-<body> 
-
-<div class="leftrow">
-<div>
-  <button class="boton_original" onclick="cambiar_color_original()" ></button>
-  <br>
-  <button class="boton_verde" onclick="cambiar_color_green()" ></button>
-  <br>
-  <button class="boton_rojo" onclick="cambiar_color_red()"></button>
-    <br>
-  <button class="boton_azul" onclick="cambiar_color_azul()"></button>
-  <br>
-
-</div>
- </div>
-  
-    <br>
-  
-  <div id="div1" class="primer_container">
+<body id="body" onload="body_load()"> 
+  <div class="botones_laterales"> 
+    <div>
+      <button class="boton_original" onclick="cambiar_color_original()" ></button>
+      <br>
+      <button class="boton_verde" onclick="cambiar_color_green()" ></button>
+      <br>
+      <button class="boton_rojo" onclick="cambiar_color_red()"></button>
+        <br>
+      <button class="boton_azul" onclick="cambiar_color_azul()"></button>
+      <br>
     
-  <div id="div2"class="container">
+    </div>
+  </div>
+ <br>
+  <div id="div2"class="primer_container">
+    
     <div id="div3" class="row">
         <h1 id="1h1" style="background-color:seagreen; color:white;">Proyecto JS</h1>
-    </div>
+    </div> 
+    <p><h4 id="userlogin"></h4></p> 
     <div id="navbar" class="navbar">   
             <a href="#home">Inicio</a>
-            <a href="#news">Reloj</a>
-            <a href="#sobremi">Sobre mi</a>
+            <a href="#reloj">Reloj</a>
+            <a href="#accordiondiv">Sobre mi</a>
             <a href="#contact">Contacto</a>
+            <button class="btnlogin"
+             onclick="open_modal_login()">Login</button>   
+          
      </div>
-    <p></p>
+   <br>
      <div class="slideshow-container">
 
         <div class="mySlides fade">
@@ -115,10 +117,68 @@
                </div>
             </div>
         </div>
+    <div id="accordiondiv" class="row">
+        <h2>Accordion</h2>
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+<h2>Reloj</h2>
+<div id="reloj" class="row">
+  <canvas id="canvas" width="400" height="400"
+  style="background-color:#333">
+  </canvas>
+</div>
+
+        <div id="footer" class="footer">
+          <button id="btnfooter" onclick="scrolling_smooth()" class="button">Volver</button>
+        </div>
+  </div>
+  
+    <div id="loginmodal" class="modal" >
+      
+      <div class="modal-content animate" >
+
+        <div class="modalcontainer">
+     
+      <form  onsubmit="save_sessionstorage()">
+        
+        <p><h3>Login</h3></p>
+        <label for="fname">Nombre</label>
+        <br>
+        <input type="text" id="fname" name="firstname" >
+    <br>
+        <label for="lname">Apellido</label>
+        <br>
+        <input type="text" id="lname" name="lastname" >
+        <br>
+        <input type="submit" value="Login">
+        <br>
+        <input type="button" onclick="cerrar_modal()" class="cancelbutton" value="Cancel">
+      </form>
     </div>
+  </div>
  
+     </div>
 </div>
-</div>
+
+
+ 
+  
+
+
+
 
     <script src="../js/maqueta_web.js"></script>
 

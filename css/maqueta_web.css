@@ -2,20 +2,24 @@
 body {
   
   font-family: Verdana, sans-serif; margin:0; 
-  background: url(../img/paisaje1.jpg);
+  background-image:url(../img/paisaje1.jpg);
+ 
+ 
 }
 
-.leftrow
+html {
+  scroll-behavior: smooth;
+}
+.botones_laterales
 {
-
-  background-color: seagreen;
-  position: absolute;
-  top: 70%;
+  position: relative;
+  top: 500px;;
+  
 
 }
 .boton_original
 {
-  background-color: white; /* Green */
+  background-color: white; 
   border: white;
   padding: 15px;
   font-size: 12px;
@@ -70,7 +74,7 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 1100px;
   position: relative;
   margin: auto;
 }
@@ -82,11 +86,41 @@ img {vertical-align: middle;}
         border: none;
         cursor: pointer; 
 }
+.navbar button{
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  background-color: #333;
+  position: relative;
+ 
+
+}
+.btnlogin:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+  color: black;
+  background-color: #ddd;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+
+}
+
+.button:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
 .navbar {
     overflow: hidden;
     background-color: #333;
   }
-  
+
   /* Style the navigation bar links */
   .navbar a {
     float: left;
@@ -105,22 +139,21 @@ img {vertical-align: middle;}
     background-color: #ddd;
     color: black;
   }
+  .imagen_de_fondo
+  {
+    width: auto;
+  height: auto;
+  
+  ;
+  }
 .primer_container
   {
-    max-width: 1050px;
-    position: relative;
+    max-width: 1100px;
     margin: auto;
-    background-color: white;
+    background: white;
+    padding: 20px;
 
   }
-.container
-{
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-    background-color: white;
-}
-
 
 .hr-text {
   line-height: 1em;
@@ -155,6 +188,7 @@ img {vertical-align: middle;}
 
 .row {  
     display: flex;
+    position: relative;
     flex-wrap: wrap;
   }
   .main {   

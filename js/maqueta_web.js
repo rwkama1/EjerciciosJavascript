@@ -1,13 +1,14 @@
 const body_load=()=>
 {
   let nombres,apellidos
-  nombres=window.localStorage.getItem("nombre");
-  apellidos=window.localStorage.getItem("apellido");
-  if(nombres!=null||apellidos!=null)
-  {
+  nombres=String(window.sessionStorage.getItem("nombre"));
+  apellidos=String(window.sessionStorage.getItem("apellido"));
+
     document.getElementById("userlogin").textContent="Bienvenido Usuario: "+nombres+" "+apellidos;
-  }
+  
 }
+
+//******************************* */
 //Slide de imagenes
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -39,14 +40,26 @@ function showSlides(n) {
 const cambiar_color_red=()=>
 {
   document.body.style.background="tomato";
-  //document.body.getElementsByTagName("div").backgrou
-  document.getElementById("div1").style.background="tomato";
-  document.getElementById("div2").style.background="tomato";
-  document.getElementById("div3").style.background="tomato";
+
+  
+  document.getElementById("div2").style.backgroundColor="tomato";
+  document.getElementById("div3").style.backgroundColor="tomato";
+  document.getElementById("div4").style.backgroundColor="tomato";
+  document.getElementById("accordiondiv").style.backgroundColor="tomato";
+  document.getElementById("acc1").style.backgroundColor="tomato";
+  document.getElementById("acc2").style.backgroundColor="tomato";
+  document.getElementById("acc3").style.backgroundColor="tomato";
+  document.getElementById("panel1").style.backgroundColor="tomato";
+  document.getElementById("panel2").style.backgroundColor="tomato";
+  document.getElementById("panel3").style.backgroundColor="tomato";
+  document.getElementById("canvas").style.backgroundColor="tomato";
   document.getElementById("div5").style.backgroundColor="tomato";
   document.getElementById("btn1").style.backgroundColor="tomato";
   document.getElementById("btn2").style.backgroundColor="tomato";
   document.getElementById("1h1").style.backgroundColor="tomato";
+  document.getElementById("btnlogin").style.backgroundColor="tomato";
+  document.getElementById("contactsubmit").style.backgroundColor="tomato";
+  document.getElementById("btnfooter").style.backgroundColor="tomato";
   document.getElementById("navbar").style.backgroundColor="tomato";
 
 ;
@@ -55,14 +68,26 @@ const cambiar_color_green=()=>
 {
   let color="mediumseagreen";
   document.body.style.background=color;
+
   
-  document.getElementById("div1").style.background=color;
-  document.getElementById("div2").style.background=color;
-  document.getElementById("div3").style.background=color;
+  document.getElementById("div2").style.backgroundColor=color;
+  document.getElementById("div3").style.backgroundColor=color;
+  document.getElementById("div4").style.backgroundColor=color;
+  document.getElementById("accordiondiv").style.backgroundColor=color;
+  document.getElementById("acc1").style.backgroundColor=color;
+  document.getElementById("acc2").style.backgroundColor=color;
+  document.getElementById("acc3").style.backgroundColor=color;
+  document.getElementById("panel1").style.backgroundColor=color;
+  document.getElementById("panel2").style.backgroundColor=color;
+  document.getElementById("panel3").style.backgroundColor=color;
+  document.getElementById("canvas").style.backgroundColor=color;
   document.getElementById("div5").style.backgroundColor=color;
   document.getElementById("btn1").style.backgroundColor=color;
   document.getElementById("btn2").style.backgroundColor=color;
   document.getElementById("1h1").style.backgroundColor=color;
+  document.getElementById("btnlogin").style.backgroundColor=color;
+  document.getElementById("contactsubmit").style.backgroundColor=color;
+  document.getElementById("btnfooter").style.backgroundColor=color;
   document.getElementById("navbar").style.backgroundColor=color;
 
 
@@ -73,28 +98,50 @@ const cambiar_color_azul=()=>
   let color="cornflowerblue";
   document.body.style.background=color;
   //document.body.getElementsByTagName("div").backgrou
-  document.getElementById("div1").style.background=color;
-  document.getElementById("div2").style.background=color;
-  document.getElementById("div3").style.background=color;
+  document.getElementById("div2").style.backgroundColor=color;
+  document.getElementById("div3").style.backgroundColor=color;
+  document.getElementById("div4").style.backgroundColor=color;
+  document.getElementById("accordiondiv").style.backgroundColor=color;
+  document.getElementById("acc1").style.backgroundColor=color;
+  document.getElementById("acc2").style.backgroundColor=color;
+  document.getElementById("acc3").style.backgroundColor=color;
+  document.getElementById("panel1").style.backgroundColor=color;
+  document.getElementById("panel2").style.backgroundColor=color;
+  document.getElementById("panel3").style.backgroundColor=color;
+  document.getElementById("canvas").style.backgroundColor=color;
   document.getElementById("div5").style.backgroundColor=color;
   document.getElementById("btn1").style.backgroundColor=color;
   document.getElementById("btn2").style.backgroundColor=color;
   document.getElementById("1h1").style.backgroundColor=color;
+  document.getElementById("btnlogin").style.backgroundColor=color;
+  document.getElementById("contactsubmit").style.backgroundColor=color;
+  document.getElementById("btnfooter").style.backgroundColor=color;
   document.getElementById("navbar").style.backgroundColor=color;
 ;
 }
 const cambiar_color_original=()=>
 {
   let color="white";
+  let color2="seagreen"
   document.body.style.background="url(../img/paisaje1.jpg)";
-  //document.body.getElementsByTagName("div").backgrou
-  document.getElementById("div1").style.background=color;
-  document.getElementById("div2").style.background=color;
-  document.getElementById("div3").style.background=color;
+  document.getElementById("div2").style.backgroundColor=color;
+  document.getElementById("div3").style.backgroundColor=color;
+  document.getElementById("div4").style.backgroundColor=color;
+  document.getElementById("accordiondiv").style.backgroundColor=color;
+  document.getElementById("acc1").style.backgroundColor="#eee";
+  document.getElementById("acc2").style.backgroundColor="#eee";
+  document.getElementById("acc3").style.backgroundColor="#eee";
+  document.getElementById("panel1").style.backgroundColor=color;
+  document.getElementById("panel2").style.backgroundColor=color;
+  document.getElementById("panel3").style.backgroundColor=color;
+  document.getElementById("canvas").style.backgroundColor="#333";
   document.getElementById("div5").style.backgroundColor=color;
-  document.getElementById("btn1").style.backgroundColor="seagreen";
-  document.getElementById("btn2").style.backgroundColor="seagreen";
-  document.getElementById("1h1").style.backgroundColor="seagreen";
+  document.getElementById("btn1").style.backgroundColor=color2;
+  document.getElementById("btn2").style.backgroundColor=color2;
+  document.getElementById("1h1").style.backgroundColor=color2;
+  document.getElementById("btnlogin").style.backgroundColor="#333";
+  document.getElementById("contactsubmit").style.backgroundColor=color2;
+  document.getElementById("btnfooter").style.backgroundColor=color2;
   document.getElementById("navbar").style.backgroundColor="#333";
 ;
 }
@@ -107,9 +154,9 @@ const scrolling_smooth=()=>
 const save_sessionstorage=()=>
 {
  let nombre= document.getElementById("fname").value;
-  window.localStorage.setItem("nombre",nombre);
+  window.sessionStorage.setItem("nombre",nombre);
   let apellido= document.getElementById("lname").value;
-  window.localStorage.setItem("apellido",apellido);
+  window.sessionStorage.setItem("apellido",apellido);
   event.preventDefault();
   cerrar_modal();
   document.getElementById("userlogin").textContent="Bienvenido Usuario: "+nombre+" "+apellido;

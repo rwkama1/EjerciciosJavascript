@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/maqueta_web.css">
+    <link rel="stylesheet" href="../css/contact_section_maqueta_web.css">
     <link rel="stylesheet" href="../css/form_maqueta_web.css">
     <link rel="stylesheet" href="../css/accordion_maqueta_web.css">
     <title>Maquetación Web</title>
@@ -35,7 +36,7 @@
             <a href="#reloj">Reloj</a>
             <a href="#accordiondiv">Sobre mi</a>
             <a href="#contact">Contacto</a>
-            <button class="btnlogin"
+            <button id="btnlogin" class="btnlogin"
              onclick="open_modal_login()">Login</button>   
           
      </div>
@@ -119,49 +120,85 @@
         </div>
     <div id="accordiondiv" class="row">
         <h2>Accordion</h2>
-<button class="accordion">Section 1</button>
-<div class="panel">
+<button id="acc1" class="accordion">Section 1</button>
+<div id="panel1" class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 
-<button class="accordion">Section 2</button>
-<div class="panel">
+<button id="acc2" class="accordion">Section 2</button>
+<div id="panel2" class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 
-<button class="accordion">Section 3</button>
-<div class="panel">
+<button id="acc3" class="accordion">Section 3</button>
+<div id="panel3" class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 </div>
 <h2>Reloj</h2>
-<div id="reloj" class="row">
-  <canvas id="canvas" width="400" height="400"
-  style="background-color:#333">
-  </canvas>
-</div>
 
+  <div id="reloj" class="contact_container">
+    <div class="row">
+   
+        <canvas id="canvas" width="350" height="350"
+      style="background-color:#333">
+      </canvas>
+      
+      
+    </div>
+   
+  </div>
+ 
+
+<br>
+<div id="contacto" class="contact_container">
+  <div style="text-align:center">
+    <h2>Contacto </h2>
+
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="../img/Mapa.png" style="width:100%">
+    </div>
+    <div id="contact" class="column">
+      <form method="POST">
+        <label >First Name</label>
+        <br>
+        <input type="text" id="fname" name="firstname"  required>
+        <br>
+        <label >Last Name</label>
+        <br>
+        <input type="text" id="lname" name="lastname" required>
+        <br>
+        <label >Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px" required></textarea>
+        <input id="contactsubmit" type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
         <div id="footer" class="footer">
           <button id="btnfooter" onclick="scrolling_smooth()" class="button">Volver</button>
         </div>
   </div>
   
     <div id="loginmodal" class="modal" >
+
       
       <div class="modal-content animate" >
 
-        <div class="modalcontainer">
+        <div id="divmodal" class="modalcontainer">
      
       <form  onsubmit="save_sessionstorage()">
         
         <p><h3>Login</h3></p>
         <label for="fname">Nombre</label>
         <br>
-        <input type="text" id="fname" name="firstname" >
+        <input type="text" id="fname" name="firstname" required >
     <br>
         <label for="lname">Apellido</label>
         <br>
-        <input type="text" id="lname" name="lastname" >
+        <input type="text" id="lname" name="lastname" required >
         <br>
         <input type="submit" value="Login">
         <br>
@@ -172,14 +209,6 @@
  
      </div>
 </div>
-
-
- 
-  
-
-
-
-
     <script src="../js/maqueta_web.js"></script>
 
 

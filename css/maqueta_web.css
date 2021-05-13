@@ -190,6 +190,7 @@ img {vertical-align: middle;}
     display: flex;
     position: relative;
     flex-wrap: wrap;
+
   }
   .main {   
     flex: 70%;

@@ -1,11 +1,10 @@
 const body_load=()=>
 {
-  let nombres,apellidos
-  nombres=String(window.sessionStorage.getItem("nombre"));
-  apellidos=String(window.sessionStorage.getItem("apellido"));
-
-    document.getElementById("userlogin").textContent="Bienvenido Usuario: "+nombres+" "+apellidos;
-  
+  let nombres,apellidos;
+  nombres=window.sessionStorage.getItem("nombre");
+  apellidos=window.sessionStorage.getItem("apellido");
+if(nombres!=null||apellidos!=null)
+    document.getElementById("userlogin").textContent="Bienvenido Usuario: "+nombres+" "+apellidos; 
 }
 
 //******************************* */
@@ -153,9 +152,9 @@ const scrolling_smooth=()=>
 //****************************** */
 const save_sessionstorage=()=>
 {
- let nombre= document.getElementById("fname").value;
+ let nombre= document.getElementById("lname").value;
   window.sessionStorage.setItem("nombre",nombre);
-  let apellido= document.getElementById("lname").value;
+  let apellido= document.getElementById("lapellido").value;
   window.sessionStorage.setItem("apellido",apellido);
   event.preventDefault();
   cerrar_modal();
@@ -175,8 +174,8 @@ const cerrar_modal=()=>
 }
 const limpiarcampos=()=>
 {
-  document.getElementById("fname").value="";
   document.getElementById("lname").value="";
+  document.getElementById("lapellido").value="";
 }
 //********************************* */
 // Get the modal
@@ -286,4 +285,25 @@ function drawHand(ctx, pos, length, width) {
     ctx.lineTo(0, -length);
     ctx.stroke();
     ctx.rotate(-pos);
+}
+//*********************************************** */
+//CONTACT SUBMIT
+const contact_submit=()=>
+{
+  let contname,contapellido,subject,email;
+  contname= document.getElementById("contactname").value;
+  contapellido= document.getElementById("contactapellido").value;
+  subject= document.getElementById("subject").value;
+  email= document.getElementById("email").value;
+  
+  let string="El formulario se valido con exito: Nombre: "+contname+" Apellido: "
+  +contapellido+" Asunto: "+subject+" Email: "+email;
+
+  alert(string);
+   document.getElementById("contactname").value="";
+   document.getElementById("contactapellido").value="";
+   document.getElementById("subject").value="";
+   document.getElementById("email").value="";
+  event.preventDefault();
+
 }

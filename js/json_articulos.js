@@ -67,7 +67,7 @@ const mostrar_datos=()=>
 
  
 }
-function filter_by_name() {
+const filter_by_name=()=> {
     var input, filter, table, tr, td, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();

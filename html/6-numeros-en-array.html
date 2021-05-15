@@ -5,12 +5,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
 </head>
-<body>
-    <button onclick="busqueda_elemento_array()">Buscar elemento en el array</button>
-    <h3 id="busqueda_array"></h3>
-    <br>
+<body >
+    <div class="w3-display-topleft" >
+        <div class="w3-container w3-blue"> 
+            <h2>Trabajando con Array</h2>
+          </div>
+          <br>
+          <form class="w3-container" onsubmit="operaciones_array()">
+            <div class="w3-row-padding">
+                <div class="w3-half">
+                    <label>Primer numero</label>
+                    <input class="w3-input" id="primern" type="number" min="1" required>
+                </div>
+                <div class="w3-half">
+                    <label>Segundo Numero</label>
+                    <input class="w3-input" id="segundon" type="number" min="1" required>
+                </div>
+            </div>
+            <div class="w3-row-padding">
+                <div class="w3-half">
+                    <label>Tercer numero</label>
+                    <input class="w3-input" id="tercern" type="number" min="1" required>
+                </div>
+                <div class="w3-half">
+                    <label>Cuarto Numero</label>
+                    <input class="w3-input" id="cuarton" type="number" min="1" required>
+                </div>
+            </div>
+            <div class="w3-row-padding">
+                <div class="w3-half">
+                    <label>Quinto numero</label>
+                    <input class="w3-input" id="quinton" type="number" min="1" required>
+                </div>
+                <div class="w3-half">
+                    <label>Sexto Numero</label>
+                    <input class="w3-input" id="sexton" type="number" min="1" required>
+                </div>
+            </div>
+            <br>
+            <div class="w3-row-padding">
+                <div class="w3-half">
+                    <input class="w3-btn w3-blue" type="submit" value="Calcular">   
+                </div>
+                
+                <div class="w3-half">
+                    <input id="buscar" class="w3-btn w3-blue" type="button" value="Buscar" disabled onclick="busqueda_elemento_array()">   
+                </div>
+            </div>
+        </form>
+            <br>
+          <div class="w3-row-padding">
+            <div class="w3-half">
+                <p><h4 id="mostrararray"></h4></p>
+            </div>   
+            <div class="w3-half">
+                <p><h4 id="ordenararray"></h4></p>
+            </div>      
+          </div>
+          <div class="w3-row-padding">
+            <div class="w3-half">
+              <p><h4 id="invertirarray"></h4></p>
+            </div>   
+            <div class="w3-half">
+                <p><h4 id="cantidadelementos"></h4></p>
+            </div>      
+          </div>
+            
+         
+        </div>
+
     <script src="../js/6-numeros-en-array.js"></script> 
 </body>
 </html>

@@ -4,9 +4,36 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="../js/cadenadetexto.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
     <body>
-    
+        <div class="w3-display-topleft">
+            <div class="w3-container w3-blue"> 
+                <h2>Cadena de texto</h2>
+            </div>
+              
+              <form class="w3-container" onsubmit="mostrar_frase()">
+                <div class="w3-row-padding">
+                   
+                        <p><h5>Ingrese una frase: </h5></p>
+                        <textarea  id="textarea" required></textarea>
+                </div>
+                <br>
+                <div class="w3-row-padding">
+                   <input class="w3-btn w3-blue" type="submit" value="Calcular">
+                </div>
+              </form> 
+              <div class="w3-row-padding">
+               <p><h3 id="mostrarfrase"></h3></p>
+               <p><h4 id="numeropalabras"></h4></p>
+               <p><h4 id="primerapalabra"></h4></p>
+               <p><h4 id="ultimapalabra"></h4></p>
+               <p><h4 id="ordeninverso"></h4></p>
+               <p><h4 id="ordenaz"></h4></p>
+               <p><h4 id="ordenza"></h4></p>
+               <p><h2 id="palindromo"></h2></p>
+            </div>
+        </div>
+            <script src="../js/cadenadetexto.js"></script>
     </body>
 </html>

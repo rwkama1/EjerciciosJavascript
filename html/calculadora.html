@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="../js/calculadora.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-    
+  <div class="w3-display-topleft">
+    <div class="w3-container w3-blue"> 
+        <h2>Calculadora</h2>
+      </div>
+      
+      <form class="w3-container" onsubmit="calcular()">
+        <p>
+        <label>Primer numero</label>
+        <input class="w3-input" id="primernumero" type="number" min="1" required></p>
+        <p>
+        <label>Segundo Numero</label>
+        <input class="w3-input" id="segundonumero" type="number" min="1" required></p>
+        <br>
+        <input class="w3-btn w3-blue" type="submit" value="Calcular">
+        <br>
+        <p><h3 id="suma"></h3></p>
+        <p><h3 id="resta"></h3></p>
+        <p><h3 id="multiplicacion"></h3></p>
+        <p><h3 id="division"></h3></p>
+      </form><br>
+   
+     
+    </div>
+  <script src="../js/calculadora.js"></script> 
 </body>
 </html>

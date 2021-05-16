@@ -5,14 +5,18 @@
 // que han pasado hasta la fecha actual.
 // Si la cadena introducida no se reconoce como fecha
 // devolverá false
+document.getElementById("fecha").max=new Date().toISOString().split("T")[0];
+//Verifica que la fecha indicada no sobrepase a la fecha actual
+
 const calcular=()=>
 {
     let date =new Date(document.getElementById("fecha").value);
     let hoy=new Date();
+   
     let diff=hoy-date;
     let resultado=(Math.floor(diff/(1000*60*60*24)))
-    document.getElementById("resultado").textContent="La diferencia de dias entre la fecha "
-    +date.toLocaleDateString()
+    document.getElementById("resultado").textContent="La diferencia de dias entre la  indicada fecha "
+    
     +" y la fecha actual es "+resultado;
     event.preventDefault();
 }
